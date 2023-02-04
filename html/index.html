@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="IE-edge">
+  <!-- title -->
+  <title>Clear Reflections</title>
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+  <link rel="manifest" href="../favicon/site.webmanifest">
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="../css/nav.css">
+  <!-- Font Awesome -->
+  <script src="../js/fontawesome.js"></script>
+  <!-- JQuery -->
+  <script src="../js/jQuery.js"></script>
+</head>
+
+<body>
+  <!-- nav -->
+  <nav>
+    <!--menu bar -->
+    <div class="nav">
+      <!-- LOGO -->
+      <a href="" class="logo">
+        <img src="../images/logo.png" alt="LOGO">
+      </a>
+
+      <!-- menu-icon -->
+      <div class="toggle"></div>
+
+      <!-- menu -->
+      <ul class="menu">
+        <!-- home page-->
+        <li><a href="" class="active">Home</a></li>
+        <!-- about page -->
+        <li><a href="./about.html">About Us</a></li>
+        <!-- products page dropdown-->
+        <li class="product">
+          <a href="javascript:void(0)" class="product-btn">Products</a>
+          <div class="product-content">
+            <a href="#">Drawing / Living Room Mirrors</a>
+            <a href="#">Bathroom Mirrors</a>
+            <a href="#">Dressing Mirrors</a>
+            <a href="#">Bedroom Mirrors</a>
+          </div>
+        </li>
+        <li><a href="./contacts.html">Contact Us</a></li>
+      </ul>
+
+      <!-- search menu -->
+      <div class="search-menu">
+        <!-- search -->
+        <a href="javascript:void(0);" class="search">
+          <i class="fas fa-search"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- search bar -->
+  <div class="search-bar">
+    <!-- search-input -->
+    <div class="search-input">
+      <!-- input -->
+      <input type="text" placeholder="Search For Products" />
+      <!-- cancel-btn -->
+      <a href="javascript:void(0);" class="search-cancel">
+        <i class="fas fa-times"></i>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    //For Search Bar
+    $(document).on("click", ".search", () => {
+      $(".search-bar").addClass("search-bar-active");
+    });
+
+    $(document).on("click", ".search-cancel", () => {
+      $(".search-bar").removeClass("search-bar-active");
+    });
+    // for fix menu when scroll
+    $(window).scroll(function () {
+      if ($(document).scrollTop() > 0) {
+        $(".nav").addClass("sticky-nav");
+      } else {
+        $(".nav").removeClass("sticky-nav");
+      }
+    });
+
+    // for-responsive menu
+    $(document).ready(function () {
+      $(".toggle").click(function () {
+        $(".toggle").toggleClass("active");
+        $(".nav").toggleClass("active");
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,270 @@
+@import url();
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: poppins;
+  background-color: #fff;
+}
+
+nav {
+  background-color: white;
+  width: 100%;
+  height: 80px;
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.05);
+  z-index: 100;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 45px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo img {
+  height: 80px;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu li {
+  position: relative;
+  margin: 20px;
+  display: flex;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.menu li a {
+  color: #555;
+}
+
+.menu a:hover:not(.product-btn) {
+  color: #0b0d9d;
+}
+
+.menu a.active {
+  color: #0b0d9d;
+  font-weight: bolder;
+  transition: all ease 0.3s;
+}
+
+li.product {
+  display: inline-block;
+}
+
+.product-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.product-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.product-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.product:hover .product-content {
+  display: block;
+}
+
+.search-menu a {
+  margin: 0px 10px;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.search-menu a i:hover {
+  color: #0b0d9d;
+}
+
+.search-bar {
+  width: 100%;
+  height: 300px;
+  background-color: #fff;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  box-shadow: 2px -5px 30px rgba(0, 0, 0, 0.1);
+  z-index: 101;
+  animation: search 0.3s;
+}
+
+.search-input {
+  width: 90%;
+  border-bottom: 2px solid #555;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  margin-top: 20px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 30px;
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  margin: 20px;
+  padding: 0px 20px;
+}
+
+.search-cancel {
+  color: #272727;
+  font-size: 2rem;
+  padding-right: 40px;
+}
+
+.search-bar {
+  display: none;
+}
+
+.search-bar-active {
+  display: flex;
+}
+
+.sticky-nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.05);
+  z-index: 102;
+}
+
+@media (max-width: 1010px) {
+  nav {
+    position: relative;
+  }
+
+  .nav {
+    height: 80px;
+  }
+
+  .sticky-nav {
+    height: 80px;
+  }
+
+  .sticky-nav .menu {
+    top: 80px;
+  }
+
+  .menu {
+    position: absolute;
+    top: 110px;
+    left: 0;
+    background-color: #ffffff;
+    border-bottom: 4px solid #555;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 102;
+    flex-direction: column;
+    display: none;
+  }
+
+  .menu li {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav .menu li a {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 25px;
+  }
+
+  .toggle {
+    display: block;
+  }
+
+  .toggle::before {
+    content: "\f0c9";
+    font-family: fontAwesome;
+    line-height: 30px;
+    z-index: 1;
+    cursor: pointer;
+  }
+
+  .toggle.active::before {
+    content: "\f00d";
+  }
+
+  .nav.active .menu {
+    display: block;
+  }
+
+  .menu a:hover:not(.product-btn) {
+    background-color: #f1f1f1;
+    color: #0b0d9d;
+    border: none;
+    border-radius: 0;
+  }
+
+  .menu a.active:not(.product-btn) {
+    background-color: #0b0d9d;
+    color: #ffffff;
+    transition: all ease 0.3s;
+  }
+
+  .search-input {
+    height: 60px;
+  }
+
+  .search-input input,
+  .search-cancel {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav {
+    padding: 10px;
+  }
+
+  .menu a:hover:not(.product-btn) {
+    background-color: #f1f1f1;
+    color: #0b0d9d;
+    border: none;
+    border-radius: 0;
+  }
+
+  .menu a.active:not(.product-btn) {
+    background-color: #0b0d9d;
+    color: #ffffff;
+    transition: all ease 0.3s;
+  }
+}
