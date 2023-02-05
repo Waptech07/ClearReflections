@@ -21,7 +21,7 @@
     <script src="../js/jQuery.js"></script>
 </head>
 
-<body>
+<body onload="getLocation()">
     <!-- nav -->
     <nav>
         <!-- menu bar -->
@@ -126,9 +126,14 @@
                 <p>123 Main Street Anytown, USA 99999</p>
         </div>
     </div>
+    <!-- closing message -->
     <div>
         <h4 class="closing">We look forward to hearing from you!</h4>
     </div>
+
+    <!-- displaying address using geolocation API -->
+        <h2>Our Address</h2>
+        <p id="address"></p>
 
     <script>
         //For Search Bar
@@ -156,6 +161,29 @@
                 $(".nav").toggleClass("active");
             });
         });
+
+        // for geolocation API 
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showAddress);
+            } else {
+                document.getElementById("address").innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+        function showAddress(position) {
+            var lat = position.coords.latitude;
+            var lng = position.coords.longitude;
+
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + lat + "," + lng + "&key=YOUR_API_KEY", true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var result = JSON.parse(xhr.responseText);
+                    document.getElementById("address").innerHTML = result.results[0].formatted_address;
+                }
+            };
+            xhr.send();
+        }
     </script>
 </body>
 
