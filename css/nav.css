@@ -1,4 +1,4 @@
-@import url();
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap');
 
 * {
   box-sizing: border-box;
@@ -8,7 +8,9 @@ body {
   margin: 0;
   padding: 0;
   font-family: poppins;
-  background-color: #fff;
+  background: #f1f1f1;
+  font-family: 'Open Sans', sans-serif;
+  padding: 30px;
 }
 
 nav {
@@ -159,6 +161,39 @@ li.product {
   background-color: #ffffff;
   box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.05);
   z-index: 102;
+}
+
+.contact-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+label,
+input,
+textarea {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+input[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
 }
 
 @media (max-width: 1010px) {
