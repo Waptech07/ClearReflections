@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap");
 
 * {
   box-sizing: border-box;
@@ -9,7 +9,7 @@ body {
   padding: 0;
   font-family: poppins;
   background: #f1f1f1;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   padding: 30px;
 }
 
@@ -169,7 +169,19 @@ li.product {
   padding: 20px;
   background-color: #ffffff;
   box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
   text-align: center;
+}
+
+.contact-container h1 {
+  border: 4px solid #0b0d9d;
+  border-radius: 20px;
+  margin: 0 30%;
+}
+
+.contact-container h1,
+.contact-container label {
+  color: #0b0d9d;
 }
 
 form {
@@ -179,21 +191,36 @@ form {
   margin-top: 20px;
 }
 
+label {
+  text-align: left;
+}
+
+input,
+textarea {
+  border-radius: 10px;
+  border: 1px solid #0b0d9d;
+}
+
 label,
 input,
 textarea {
   width: 90%;
   padding: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-size: 16px;
 }
 
 input[type="submit"] {
-  background-color: #333;
-  color: #fff;
+  background-color: #f0f0f0;
+  color: #0b0d9d;
   padding: 10px 20px;
   border: none;
   cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #0b0d9d;
+  color: #fff;
 }
 
 @media (max-width: 1010px) {
@@ -283,6 +310,7 @@ input[type="submit"] {
   .search-cancel {
     font-size: 1.4rem;
   }
+
 }
 
 @media (max-width: 600px) {
@@ -301,5 +329,9 @@ input[type="submit"] {
     background-color: #0b0d9d;
     color: #ffffff;
     transition: all ease 0.3s;
+  }
+  
+  .contact-container h1 {
+    margin: 0 20%;
   }
 }
