@@ -19,9 +19,10 @@
     <script src="../js/fontawesome.js"></script>
     <!-- jQuery -->
     <script src="../js/jQuery.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZexVz-yBm8iDeTNveCmeMafrayhU4CHY"></script>
 </head>
 
-<body onload="getLocation()">
+<body onload="initMap()">
     <!-- nav -->
     <nav>
         <!-- menu bar -->
@@ -110,20 +111,20 @@
         <!-- phone support -->
         <div class="contact-support">
             <h5>Phone Support</h5>
-                <p>Monday to Friday : 9am - 5pm PST</p>
-                <p>Phone: (555) 555-5555</p>
+            <p>Monday to Friday : 9am - 5pm PST</p>
+            <p>Phone: (555) 555-5555</p>
         </div>
         <!-- email support -->
         <div class="contact-support">
             <h5>Email Support </h5>
-                <p>Submit a ticket through our website</p>
-                <p>Email : support@clearreflections.com</p>
+            <p>Submit a ticket through our website</p>
+            <p>Email : support@clearreflections.com</p>
         </div>
         <!-- mailing address -->
         <div class="contact-support">
             <h5>Mailing Address </h5>
-                <p>Ecommerce Website</p>
-                <p>123 Main Street Anytown, USA 99999</p>
+            <p>Ecommerce Website</p>
+            <p>123 Main Street Anytown, USA 99999</p>
         </div>
     </div>
     <!-- closing message -->
@@ -132,8 +133,9 @@
     </div>
 
     <!-- displaying address using geolocation API -->
-        <h2>Our Address</h2>
-        <p id="address"></p>
+        <div id="map"></div>
+        <h2>Company Address</h2>
+        <p>No 2, 4 Alagbole Rd, Ojodu 112107, Lagos, Nigeria</p>
 
     <script>
         //For Search Bar
@@ -162,27 +164,17 @@
             });
         });
 
-        // for geolocation API 
-        function getLocation() {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(showAddress);
-            } else {
-                document.getElementById("address").innerHTML = "Geolocation is not supported by this browser.";
-            }
-        }
-        function showAddress(position) {
-            var lat = position.coords.latitude;
-            var lng = position.coords.longitude;
-
-            var xhr = new XMLHttpRequest();
-            xhr.open("GET", "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + lat + "," + lng + "&key=YOUR_API_KEY", true);
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    var result = JSON.parse(xhr.responseText);
-                    document.getElementById("address").innerHTML = result.results[0].formatted_address;
-                }
-            };
-            xhr.send();
+        // for geolocation API
+        function initMap() {
+            var companyAddress = { lat: 6.6616113, lng: 3.3504297 };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 8,
+                center: companyAddress
+            });
+            var marker = new google.maps.Marker({
+                position: companyAddress,
+                map: map
+            });
         }
     </script>
 </body>
