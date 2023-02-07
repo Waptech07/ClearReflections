@@ -76,6 +76,7 @@ input[type="submit"]:hover {
 }
 
 .contact-support p {
+    margin: 10px;
     font-size: 13px;
 }
 
@@ -89,9 +90,13 @@ input[type="submit"]:hover {
     margin-top: -30px;
 }
 
-#map {
+.map {
     height: 500px;
     width: 100%;
+}
+
+.address {
+    margin: 10px 5%;
 }
 
 @media (max-width: 1010px) {
@@ -107,9 +112,22 @@ input[type="submit"]:hover {
         justify-content: center;
         flex-grow: 0.7;
     }
+
+    .info {
+        margin: 50px 30px;
+    }
+
+    .map {
+        width: 90%;
+        margin: 10px 5%;
+    }
 }
 
 @media (max-width: 768px) {
+    .contact-container {
+        width: 90%;
+    }
+
     .support-container {
         display: block;
         width: 100%;

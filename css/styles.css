@@ -10,12 +10,12 @@ body {
   font-family: poppins;
   background: url('../images/logo.png') fixed no-repeat center #f1f1f1;
   font-family: "Open Sans", sans-serif;
-  padding: 30px;
 }
 
 nav {
   background-color: white;
-  width: 100%;
+  margin: 30px 2.5%;
+  width: 95%;
   height: 80px;
   box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.05);
   z-index: 100;
@@ -171,6 +171,103 @@ li.product {
   z-index: 102;
 }
 
+.footer {
+  margin-top: 10px;
+  background-color: #ffffff;
+  padding: 70px 0;
+}
+
+.footer-container {
+  width: 100%;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul {
+  list-style: none;
+}
+
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  color: #0b0d9d;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-col h4::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #555;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #0b0d9d;
+  text-decoration: none;
+  font-weight: 300;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  font-weight: bolder;
+  padding-left: 8px;
+}
+
+footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: #ffffff;
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #0b0d9d;
+  transition: all 0.3s ease;
+}
+
+.footer-col .social-links {
+  color: #0b0d9d;
+}
+
+.footer-col .social-links p:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.footer-col .social-links p {
+  color: #0b0d9d;
+  justify-content: space-between;
+  font-size: 16px;
+}
+
+.footer-col .social-links p:hover {
+  color: #0b0d9d;
+  font-weight: bolder;
+  padding-left: 8px;
+}
+
 @media (max-width: 1010px) {
   nav {
     position: relative;
@@ -260,6 +357,14 @@ li.product {
   }
 }
 
+@media(max-width:767px) {
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+    color: #ffffff;
+  }
+}
+
 @media (max-width: 600px) {
   .nav {
     padding: 10px;
@@ -276,5 +381,10 @@ li.product {
     background-color: #0b0d9d;
     color: #ffffff;
     transition: all ease 0.3s;
+  }
+
+  .footer-col {
+    width: 100%;
+    color: #ffffff;
   }
 }

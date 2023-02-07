@@ -1,4 +1,6 @@
 .main {
+    width: 95%;
+    margin: -30px 2.5%;
     background-image: url(../images/funny\ 3.jpg);
     background-size: contain;
     height: 500px;

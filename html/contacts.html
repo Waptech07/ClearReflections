@@ -134,10 +134,45 @@
     </div>
 
     <!-- displaying map using geolocation API -->
-        <div id="map"></div>
-        <h2>Company Address</h2>
+    <div class="map"></div>
+    <div class="address">
+        <h2>Company's Address</h2>
         <p>No 2, 4 Alagbole Rd, Ojodu 112107, Lagos, Nigeria</p>
+    </div>
 
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">shippings</a></li>
+                        <li><a href="#">returns</a></li>
+                        <li><a href="#">order status</a></li>
+                        <li><a href="#">payment options</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow us</h4>
+                    <div class="social-links">
+                        <p><i class="fa-brands fa-facebook"></i> Facebook</p>
+                        <p><i class="fa-brands fa-twitter"></i> Twitter</p>
+                        <p><i class="fa-brands fa-instagram"></i> Instagram</p>
+                        <p><i class="fa-brands fa-linkedin"></i> Linkedin</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script>
         //For Search Bar
         $(document).on("click", ".search", () => {
@@ -168,7 +203,7 @@
         // for geolocation API
         function initMap() {
             var Address = { lat: 6.66155, lng: 3.3525949 };
-            var map = new google.maps.Map(document.getElementById('map'), {
+            var map = new google.maps.Map(document.querySelector('.map'), {
                 zoom: 15,
                 center: Address
             });
