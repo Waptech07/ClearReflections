@@ -159,6 +159,47 @@
     margin: 10px auto 40px auto;
 }
 
+.services {
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: auto;
+  }
+  
+  .services-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    min-width: 250px;
+    padding: 20px;
+    margin: 15px;
+    flex-grow: 0.7;
+    background-color: #ffffff;
+  }
+  
+  .services-box i {
+    color: #0b0d9d;
+    font-size: 2rem;
+    margin: 15px;
+  }
+  
+  .services-box span {
+    color: #222222;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size: 1rem;
+  }
+  
+  .services-box p {
+    color: #878787;
+    margin: 0;
+    font-size: 0.9rem;
+  }
+
 @media (max-width: 1200px) {
     .product-card {
         display: flex;
