@@ -16,10 +16,13 @@
   <!-- stylesheet -->
   <link rel="stylesheet" href="../css/styles.css">
   <link rel="stylesheet" href="../css/home.css">
+  <!-- light slider -->
+  <link rel="stylesheet" href="../css/lightslider.css">
   <!-- Font Awesome -->
   <script src="../js/fontawesome.js"></script>
   <!-- JQuery -->
   <script src="../js/jQuery.js"></script>
+  <script src="../js/lightslider.js"></script>
 </head>
 
 <body>
@@ -130,64 +133,62 @@
   <div class="category-heading">
     <h2>Categories</h2>
   </div>
-  <section id="categories">
-    <ul class="categories">
-      <li class="item">
-        <div class="category">
-          <a href="#">
-            <img src="../images/wooden-framed.png" alt="category 1">
-          </a>
-        </div>
-        <!-- text -->
-        <span>Wooden Framed</span>
-      </li>
-      <li class="item">
-        <div class="category">
-          <a href="#">
-            <img src="../images/pngimg.com - mirror_PNG17324.png" alt="category 1">
-          </a>
-        </div>
-        <!-- text -->
-        <span>Acrylic Bordered</span>
-      </li>
-      <li class="item">
-        <div class="category">
-          <a href="#">
-            <img src="../images/pngimg.com - mirror_PNG17324.png" alt="category 1">
-          </a>
-        </div>
-        <!-- text -->
-        <span>Metal Bordered</span>
-      </li>
-      <li class="item">
-        <div class="category">
-          <a href="#">
-            <img src="../images/pngimg.com - mirror_PNG17324.png" alt="category 1">
-          </a>
-        </div>
-        <!-- text -->
-        <span>Decorative Mirrors</span>
-      </li>
-      <li class="item">
-        <div class="category">
-          <a href="#">
-            <img src="../images/pngimg.com - mirror_PNG17324.png" alt="category 1">
-          </a>
-        </div>
-        <!-- text -->
-        <span>Led Mirrors</span>
-      </li>
-      <li class="item">
-        <div class="category">
-          <a href="#">
-            <img src="../images/pngimg.com - mirror_PNG17324.png" alt="category 1">
-          </a>
-        </div>
-        <!-- text -->
-        <span>Bluetooth Mirrors</span>
-      </li>
-    </ul>
-  </section>
+  <ul id="autoWidth" class="cs  -hidden">
+    <li class="item">
+      <div class="category">
+        <a href="#">
+          <img src="../images/Wooden Framed/wooden-framed.png" alt="category 1">
+        </a>
+      </div>
+      <!-- text -->
+      <span>Wooden Framed</span>
+    </li>
+    <li class="item">
+      <div class="category">
+        <a href="#">
+          <img src="../images/pngimg.com - mirror_PNG102960.png" alt="category 2">
+        </a>
+      </div>
+      <!-- text -->
+      <span>Acrylic Bordered</span>
+    </li>
+    <li class="item">
+      <div class="category">
+        <a href="#">
+          <img src="../images/pngimg.com - mirror_PNG17323.png" alt="category 3">
+        </a>
+      </div>
+      <!-- text -->
+      <span>Metal Bordered</span>
+    </li>
+    <li class="item">
+      <div class="category">
+        <a href="#">
+          <img src="../images/pngimg.com - mirror_PNG102972.png" alt="category 4">
+        </a>
+      </div>
+      <!-- text -->
+      <span>Decorative Mirrors</span>
+    </li>
+    <li class="item">
+      <div class="category">
+        <a href="#">
+          <img src="../images/pngimg.com - mirror_PNG102969.png" alt="category 5">
+        </a>
+      </div>
+      <!-- text -->
+      <span>Led Mirrors</span>
+    </li>
+    <li class="item">
+      <div class="category">
+        <a href="#">
+          <img src="../images/pngimg.com - mirror_PNG102973 (1).png" alt="category 6">
+        </a>
+      </div>
+      <!-- text -->
+      <span>Bluetooth Mirrors</span>
+    </li>
+  </ul>
 
   <footer class="footer">
     <div class="footer-container">
@@ -195,8 +196,8 @@
         <div class="footer-col">
           <h4>Company</h4>
           <ul>
-            <li><a href="#">about us</a></li>
-            <li><a href="#">our services</a></li>
+            <li><a href="./about.html">about us</a></li>
+            <li><a href="./products.html">our services</a></li>
             <li><a href="#">privacy policy</a></li>
           </ul>
         </div>
@@ -224,6 +225,21 @@
   </footer>
 
   <script>
+    //   for category slider
+    $(document).ready(function () {
+      $("#autoWidth").lightSlider({
+        autoWidth: true,
+        loop: true,
+        pauseOnHover: true,
+        auto: true,
+        item: 1,
+        slideMargin: 20,
+        onSliderLoad: function () {
+          $("#autoWidth").removeClass("cs-hidden");
+        },
+      });
+    });
+
     //For Search Bar
     $(document).on("click", ".search", () => {
       $(".search-bar").addClass("search-bar-active");
