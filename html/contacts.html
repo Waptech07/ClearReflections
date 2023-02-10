@@ -2,226 +2,226 @@
 <html lang="en">
 
 <head>
-    <!-- required meta tags -->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <!-- title -->
-    <title>Clear Reflections</title>
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
-    <link rel="manifest" href="../favicon/site.webmanifest">
-    <!-- stylesheet -->
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/contacts.css">
-    <!-- fontAwesome icons -->
-    <script src="../js/fontawesome.js"></script>
-    <!-- jQuery -->
-    <script src="../js/jQuery.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZexVz-yBm8iDeTNveCmeMafrayhU4CHY"></script>
+  <!-- required meta tags -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <!-- title -->
+  <title>Clear Reflections</title>
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+  <link rel="manifest" href="../favicon/site.webmanifest">
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/contacts.css">
+  <!-- fontAwesome icons -->
+  <script src="../js/fontawesome.js"></script>
+  <!-- jQuery -->
+  <script src="../js/jQuery.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZexVz-yBm8iDeTNveCmeMafrayhU4CHY"></script>
 </head>
 
 <body onload="initMap()">
-    <!-- nav -->
-    <nav>
-        <!-- menu bar -->
-        <div class="nav">
-            <!-- Logo -->
-            <a href="" class="logo">
-                <img src="../images/logo.png" alt="LOGO">
-            </a>
+  <!-- nav -->
+  <nav>
+    <!-- menu bar -->
+    <div class="nav">
+      <!-- Logo -->
+      <a href="" class="logo">
+        <img src="../images/logo.png" alt="LOGO">
+      </a>
 
-            <!-- menu icon -->
-            <div class="toggle"></div>
+      <!-- menu icon -->
+      <div class="toggle"></div>
 
-            <!-- menu -->
-            <ul class="menu">
-                <!-- home -->
-                <li><a href="./index.html">Home</a></li>
-                <!-- about page -->
-                <li><a href="./about.html">About Us</a></li>
-                <!-- products page dropdown -->
-                <li class="product">
-                    <a href="javascript:void(0)" class="product-btn">Products</a>
-                    <div class="product-content">
-                        <a href="./products.html">Drawing / Living Room Mirrors</a>
-                        <a href="./products.html">Bathroom Mirrors</a>
-                        <a href="./products.html">Dressing Mirrors</a>
-                        <a href="./products.html">Bedroom Mirrors</a>
-                    </div>
-                </li>
-                <li><a href="" class="active">Contact Us</a></li>
-            </ul>
+      <!-- menu -->
+      <ul class="menu">
+        <!-- home -->
+        <li><a href="./index.html">Home</a></li>
+        <!-- about page -->
+        <li><a href="./about.html">About Us</a></li>
+        <!-- products page dropdown -->
+        <li class="product">
+          <a href="javascript:void(0)" class="product-btn">Products</a>
+          <div class="product-content">
+            <a href="./products.html">Drawing / Living Room Mirrors</a>
+            <a href="./products.html">Bathroom Mirrors</a>
+            <a href="./products.html">Dressing Mirrors</a>
+            <a href="./products.html">Bedroom Mirrors</a>
+          </div>
+        </li>
+        <li><a href="" class="active">Contact Us</a></li>
+      </ul>
 
-            <!-- search menu -->
-            <div class="search-menu">
-                <!-- search -->
-                <a href="javascript:void(0);" class="search">
-                    <i class="fas fa-search"></i>
-                </a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- search bar -->
-    <div class="search-bar">
-        <!-- search-input -->
-        <div class="search-input">
-            <!-- input -->
-            <input type="text" placeholder="Search For Products" />
-            <!-- cancel-btn -->
-            <a href="javascript:void(0);" class="search-cancel">
-                <i class="fas fa-times"></i>
-            </a>
-        </div>
+      <!-- search menu -->
+      <div class="search-menu">
+        <!-- search -->
+        <a href="javascript:void(0);" class="search">
+          <i class="fas fa-search"></i>
+        </a>
+      </div>
     </div>
+  </nav>
 
-    <!-- info -->
-    <div class="info">
-        <!-- info text -->
-        <h5>
-            Have a question or need help with your order? We're here to assist you. Please use the form below to get in
-            touch with us, and we'll get back to you as soon as we can.
-        </h5>
+  <!-- search bar -->
+  <div class="search-bar">
+    <!-- search-input -->
+    <div class="search-input">
+      <!-- input -->
+      <input type="text" placeholder="Search For Products" />
+      <!-- cancel-btn -->
+      <a href="javascript:void(0);" class="search-cancel">
+        <i class="fas fa-times"></i>
+      </a>
     </div>
+  </div>
 
+  <!-- info -->
+  <div class="info">
+    <!-- info text -->
+    <h5>
+      Have a question or need help with your order? We're here to assist you. Please use the form below to get in
+      touch with us, and we'll get back to you as soon as we can.
+    </h5>
+  </div>
+
+  <!-- contact form -->
+  <div class="contact-container">
+    <!-- contact header -->
+    <h1>Contact Us</h1>
     <!-- contact form -->
-    <div class="contact-container">
-        <!-- contact header -->
-        <h1>Contact Us</h1>
-        <!-- contact form -->
-        <form action="mailto:support@clearreflections.com" method="post" enctype="text/plain">
-            <!-- name input -->
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <!-- email input -->
-            <label for="email">Email:</label>
-            <input type="email" id="email" placeholder="email@example.com" required>
-            <!-- message input -->
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <!-- submit button -->
-            <input type="submit" value="Submit">
-        </form>
+    <form action="mailto:support@clearreflections.com" method="post" enctype="text/plain">
+      <!-- name input -->
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <!-- email input -->
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="email@example.com" required>
+      <!-- message input -->
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+      <!-- submit button -->
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+  <!-- support section -->
+  <div class="support-container">
+    <!-- phone support -->
+    <div class="contact-support">
+      <h5>Phone Support</h5>
+      <p>Monday to Friday : 9am - 5pm PST</p>
+      <p>Phone: <a href="tel:+2349091301846">(555) 555-5555</a></p>
     </div>
-
-    <!-- support section -->
-    <div class="support-container">
-        <!-- phone support -->
-        <div class="contact-support">
-            <h5>Phone Support</h5>
-            <p>Monday to Friday : 9am - 5pm PST</p>
-            <p>Phone: (555) 555-5555</p>
-        </div>
-        <!-- email support -->
-        <div class="contact-support">
-            <h5>Email Support </h5>
-            <p>Submit a ticket through our website</p>
-            <p>Email : support@clearreflections.com</p>
-        </div>
-        <!-- mailing address -->
-        <div class="contact-support">
-            <h5>Mailing Address </h5>
-            <p>Aptech Alagbole</p>
-            <p>No 2, 4 Alagbole Rd, Ojodu 112107, Lagos, Nigeria</p>
-        </div>
+    <!-- email support -->
+    <div class="contact-support">
+      <h5>Email Support </h5>
+      <p>Submit a ticket through our website</p>
+      <p>Email : <a href="mailto:support@clearreflections.com">support@clearreflections.com</a></p>
     </div>
-    <!-- closing message -->
-    <div>
-        <h4 class="closing">We look forward to hearing from you!</h4>
+    <!-- mailing address -->
+    <div class="contact-support">
+      <h5>Mailing Address </h5>
+      <p>Aptech Alagbole</p>
+      <p>No 2, 4 Alagbole Rd, Ojodu 112107, Lagos, Nigeria</p>
     </div>
+  </div>
+  <!-- closing message -->
+  <div>
+    <h4 class="closing">We look forward to hearing from you!</h4>
+  </div>
 
-    <!-- displaying map using geolocation API -->
-    <div class="map"></div>
-    <div class="address">
-        <h2>Company's Address</h2>
-        <p>No 2, 4 Alagbole Rd, Ojodu 112107, Lagos, Nigeria</p>
-    </div>
+  <!-- displaying map using geolocation API -->
+  <div class="map"></div>
+  <div class="address">
+    <h2>Company's Address</h2>
+    <p>No 2, 4 Alagbole Rd, Ojodu 112107, Lagos, Nigeria</p>
+  </div>
 
-    <!-- footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="row">
-                <!-- footer column 1 -->
-                <div class="footer-col">
-                    <h4>Company</h4>
-                    <!-- info about company -->
-                    <ul>
-                        <li><a href="./about.html">about us</a></li>
-                        <li><a href="#">our services</a></li>
-                        <li><a href="#">privacy policy</a></li>
-                    </ul>
-                </div>
-
-                <!-- footer column 2 -->
-                <div class="footer-col">
-                    <h4>Get help</h4>
-                    <!-- get help -->
-                    <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">shippings</a></li>
-                        <li><a href="#">returns</a></li>
-                        <li><a href="#">order status</a></li>
-                        <li><a href="#">payment options</a></li>
-                    </ul>
-                </div>
-
-                <!-- footer column 3 -->
-                <div class="footer-col">
-                    <h4>Follow us</h4>
-                    <!-- social links -->
-                    <div class="social-links">
-                        <p><i class="fa-brands fa-facebook"></i> Facebook</p>
-                        <p><i class="fa-brands fa-twitter"></i> Twitter</p>
-                        <p><i class="fa-brands fa-instagram"></i> Instagram</p>
-                        <p><i class="fa-brands fa-linkedin"></i> Linkedin</p>
-                    </div>
-                </div>
-            </div>
+  <!-- footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="row">
+        <!-- footer column 1 -->
+        <div class="footer-col">
+          <h4>Company</h4>
+          <!-- info about company -->
+          <ul>
+            <li><a href="./about.html">about us</a></li>
+            <li><a href="#">our services</a></li>
+            <li><a href="#">privacy policy</a></li>
+          </ul>
         </div>
-    </footer>
-    <script>
-        //For Search Bar
-        $(document).on("click", ".search", () => {
-            $(".search-bar").addClass("search-bar-active");
-        });
 
-        $(document).on("click", ".search-cancel", () => {
-            $(".search-bar").removeClass("search-bar-active");
-        });
+        <!-- footer column 2 -->
+        <div class="footer-col">
+          <h4>Get help</h4>
+          <!-- get help -->
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">shippings</a></li>
+            <li><a href="#">returns</a></li>
+            <li><a href="#">order status</a></li>
+            <li><a href="#">payment options</a></li>
+          </ul>
+        </div>
 
-        // for fix navbar when scroll
-        $(window).scroll(function () {
-            if ($(document).scrollTop() > 50) {
-                $(".nav").addClass("sticky-nav");
-            } else {
-                $(".nav").removeClass("sticky-nav");
-            }
-        });
+        <!-- footer column 3 -->
+        <div class="footer-col">
+          <h4>Follow us</h4>
+          <!-- social links -->
+          <div class="social-links">
+            <p><i class="fa-brands fa-facebook"></i> Facebook</p>
+            <p><i class="fa-brands fa-twitter"></i> Twitter</p>
+            <p><i class="fa-brands fa-instagram"></i> Instagram</p>
+            <p><i class="fa-brands fa-linkedin"></i> Linkedin</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    //For Search Bar
+    $(document).on("click", ".search", () => {
+      $(".search-bar").addClass("search-bar-active");
+    });
 
-        // for responsive menu
-        $(document).ready(function () {
-            $(".toggle").click(function () {
-                $(".toggle").toggleClass("active");
-                $(".nav").toggleClass("active");
-            });
-        });
+    $(document).on("click", ".search-cancel", () => {
+      $(".search-bar").removeClass("search-bar-active");
+    });
 
-        // for geolocation API
-        function initMap() {
-            var Address = { lat: 6.66155, lng: 3.3525949 };
-            var map = new google.maps.Map(document.querySelector('.map'), {
-                zoom: 15,
-                center: Address
-            });
-            var marker = new google.maps.Marker({
-                position: Address,
-                map: map
-            });
-        }
-    </script>
+    // for fix navbar when scroll
+    $(window).scroll(function () {
+      if ($(document).scrollTop() > 50) {
+        $(".nav").addClass("sticky-nav");
+      } else {
+        $(".nav").removeClass("sticky-nav");
+      }
+    });
+
+    // for responsive menu
+    $(document).ready(function () {
+      $(".toggle").click(function () {
+        $(".toggle").toggleClass("active");
+        $(".nav").toggleClass("active");
+      });
+    });
+
+    // for geolocation API
+    function initMap() {
+      var Address = {lat: 6.66155, lng: 3.3525949};
+      var map = new google.maps.Map(document.querySelector('.map'), {
+        zoom: 15,
+        center: Address
+      });
+      var marker = new google.maps.Marker({
+        position: Address,
+        map: map
+      });
+    }
+  </script>
 </body>
 
 </html>
