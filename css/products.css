@@ -1,0 +1,56 @@
+.nav-selector {
+  background-color: white; 
+  width: 95%;
+  height: 60px;
+  border-radius: 12px;
+  margin: 0 auto;
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.gray {
+  color: #555;
+}
+
+.selector {
+ content: "";
+ padding: 2px 4px;
+ border-radius: 4px;
+ border: 1px solid rgba(0,0,0,0.5);
+}
+
+.selectable {
+  text-decoration: underline;
+  color: blue;
+}
+
+li .gray {
+  cursor: default;
+}
+
+.selectable:hover {
+  cursor: pointer;
+}
+
+ul li {
+  display: inline;
+  list-style: none;
+}
+
+ul > * + * {
+  margin-left: 20px;
+}
+
+@media (max-width: 600px) {
+  ul > * + * {
+       margin-left: 10px;
+  }
+}
+
+.featured-products {
+  min-height: 400px;
+}
+
+

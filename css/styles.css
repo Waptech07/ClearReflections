@@ -70,6 +70,12 @@ li.product {
   display: inline-block;
 }
 
+li.material {
+ display: inline-block; 
+ position: relative;
+}
+
+
 .product-content {
   display: none;
   position: absolute;
@@ -93,6 +99,11 @@ li.product {
 
 .product:hover .product-content {
   display: block;
+}
+
+.material:hover .product-content {
+  display: block;
+  left: 1px;
 }
 
 .search-menu a {
