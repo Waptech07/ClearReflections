@@ -11,8 +11,16 @@
 
 }
 
-.about-banner h1 {
+.about-heading h1 {
     color: #0b0d9d;
+}
+
+.about-image img {
+    border-radius: 10px;
+    width: 30%;
+    height: 100%;
+    float: left;
+    margin: 10px 2% 2px 12%;
 }
 
 .about-banner p {
