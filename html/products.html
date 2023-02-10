@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <!-- title -->
+  <title>Clear Reflections</title>
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+  <link rel="manifest" href="../favicon/site.webmanifest">
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/home.css">
+  <link rel="stylesheet" href="../css/contacts.css">
+  <link rel="stylesheet" href="../css/products.css">
+  <!-- fontAwesome icons -->
+  <script src="../js/fontawesome.js"></script>
+  <script src="../js/products.js" defer></script>
+  <script src="../js/sticky-nav.js" defer></script>
+  <script src="../js/anchor-hijack.js" defer></script>
+  <!-- jQuery -->
+  <script src="../js/jQuery.js"></script>
+</head>
+
+<body>
+
+  <!-- nav -->
+  <nav>
+    <!--menu bar -->
+    <div class="nav">
+      <!-- LOGO -->
+      <a href="" class="logo">
+        <img src="../images/logo.png" alt="LOGO">
+      </a>
+
+      <!-- menu-icon -->
+      <div class="toggle"></div>
+
+      <!-- menu -->
+      <ul class="menu">
+        <!-- home page-->
+        <li><a href="./index.html">Home</a></li>
+        <!-- about page -->
+        <li><a href="./about.html">About Us</a></li>
+        <!-- products page dropdown-->
+        <li class="product">
+          <a href="javascript:void(0)" class="product-btn active">Products</a>
+          <div class="product-content">
+            <a href="#" class="category-item">Drawing / Living Room Mirrors</a>
+            <a href="#" class="category-item">Bathroom Mirrors</a>
+            <a href="#" class="category-item">Dressing Mirrors</a>
+            <a href="#" class="category-item">Bedroom Mirrors</a>
+          </div>
+        </li>
+        <li><a href="./contacts.html">Contact Us</a></li>
+      </ul>
+
+      <!-- search menu -->
+      <div class="search-menu">
+        <!-- search -->
+        <a href="javascript:void(0);" class="search">
+          <i class="fas fa-search"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <section class="nav-selector">
+      <ul>
+        <li class="product">
+          <a href="javascript:void(0)" class="gray">Category</a>
+          <span>></span>
+          <a href="javascript:void(0)" class="product-btn selectable" id="category">All</a>
+          <div class="product-content">
+            <a href="#" class="category-item">Drawing / Living Room Mirrors</a>
+            <a href="#" class="category-item">Bathroom Mirrors</a>
+            <a href="#" class="category-item">Dressing Mirrors</a>
+            <a href="#" class="category-item">Bedroom Mirrors</a>
+          </div>
+        </li>
+        <li class="material">
+          <a href="#" class="gray">Material</a>
+          <span>></span>
+          <a href="javascript:void(0)" class="product-btn selectable" id="material">All</a>
+          <div class="product-content">
+            <a href="#" class="material">Wooden Frame</a>
+            <a href="#" class="material">Acrylic Bordered</a>
+            <a href="#" class="material">Metal Bordered</a>
+            <a href="#" class="material">LED mirrors</a>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <section class="featured-products">
+    <div class="products" id="products-slot">
+      <!-- Injected via jQuery -->
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="row">
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">about us</a></li>
+            <li><a href="#">our services</a></li>
+            <li><a href="#">privacy policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Get help</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">shippings</a></li>
+            <li><a href="#">returns</a></li>
+            <li><a href="#">order status</a></li>
+            <li><a href="#">payment options</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Follow us</h4>
+          <div class="social-links">
+            <p><i class="fa-brands fa-facebook"></i> Facebook</p>
+            <p><i class="fa-brands fa-twitter"></i> Twitter</p>
+            <p><i class="fa-brands fa-instagram"></i> Instagram</p>
+            <p><i class="fa-brands fa-linkedin"></i> Linkedin</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+<script>
+</script>
+
+</html>
