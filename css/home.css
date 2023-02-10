@@ -13,7 +13,8 @@
     color: white;
 }
 
-.main h1, .main p {
+.main h1,
+.main p {
     color: #0004ffc0;
     font-weight: bold;
     margin: 1px;
@@ -173,9 +174,9 @@
     align-items: center;
     flex-wrap: wrap;
     margin: auto;
-  }
-  
-  .services-box {
+}
+
+.services-box {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -186,26 +187,26 @@
     margin: 15px;
     flex-grow: 0.7;
     background-color: #ffffff;
-  }
-  
-  .services-box i {
+}
+
+.services-box i {
     color: #0b0d9d;
     font-size: 2rem;
     margin: 15px;
-  }
-  
-  .services-box span {
+}
+
+.services-box span {
     color: #222222;
     font-weight: 600;
     letter-spacing: 0.5px;
     font-size: 1rem;
-  }
-  
-  .services-box p {
+}
+
+.services-box p {
     color: #878787;
     margin: 0;
     font-size: 0.9rem;
-  }
+}
 
 @media (max-width: 1200px) {
     .main {
@@ -251,6 +252,12 @@
         margin: 20px;
         padding: 20px;
         cursor: pointer;
+    }
+}
+
+@media (max-width: 800px) {
+    .main {
+        margin: -150px 2.5% 20px 2.5%;
     }
 }
 

@@ -71,8 +71,8 @@ li.product {
 }
 
 li.material {
- display: inline-block; 
- position: relative;
+  display: inline-block;
+  position: relative;
 }
 
 
@@ -196,6 +196,7 @@ li.material {
 .row {
   display: flex;
   flex-wrap: wrap;
+  margin-left: 20%;
 }
 
 ul {
@@ -378,7 +379,7 @@ footer-col .social-links a {
     margin-bottom: 30px;
   }
 
-  .footer-col ul li a{
+  .footer-col ul li a {
     font-size: 14px;
   }
 
