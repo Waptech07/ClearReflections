@@ -185,7 +185,7 @@ li.material {
 .footer {
   margin-top: 10px;
   background-color: #ffffff;
-  padding: 70px 0;
+  padding: 2rem 0;
 }
 
 .footer-container {
@@ -203,8 +203,8 @@ ul {
 }
 
 .footer-col {
-  width: 25%;
-  padding: 0 15px;
+  width: 33.33%;
+  padding: 0 10px;
 }
 
 .footer-col h4 {
@@ -376,7 +376,14 @@ footer-col .social-links a {
   .footer-col {
     width: 50%;
     margin-bottom: 30px;
-    color: #ffffff;
+  }
+
+  .footer-col ul li a{
+    font-size: 14px;
+  }
+
+  .footer-col .social-links p {
+    font-size: 14px;
   }
 }
 
@@ -387,6 +394,5 @@ footer-col .social-links a {
 
   .footer-col {
     width: 100%;
-    color: #ffffff;
   }
 }

@@ -1,0 +1,48 @@
+.about-banner {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+    padding-top: 30px;
+    margin: 75px 10%;
+    width: 80%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.about-banner h1 {
+    color: #0b0d9d;
+}
+
+.about-banner p {
+    color: #555;
+    margin: 2px 12%;
+    padding: 20px 0 50px 0;
+    font-family: 'Open Sans', sans-serif;
+    text-align: justify;
+}
+
+.about-banner p a {
+    color: #0b0d9d;
+    font-weight: bold
+}
+
+.about-banner p a:hover {
+    color: #000;
+}
+
+@media (max-width:1010px) {
+    .about-banner {
+        margin: 50px 10%;
+    }
+
+    .about-banner h1 {
+        font-size: 40px;
+    }
+
+    .about-banner p {
+        font-size: 15px;
+    }
+
+}
