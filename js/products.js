@@ -4,7 +4,7 @@ let products = [
     image: "../images/pngimg.com - mirror_PNG17358.png",
     name: "Classic generic mirror 1",
     price: "$20.00",
-    category: "Bathroom",
+    category: "Bathroom Mirrors",
     material: "Wooden Frame",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem quam optio, aliquam quia necessitatibus, explicabo illo veritatis eveniet voluptas laborum quaerat unde, corrupti earum assumenda corporis quae iusto sint alias."
   },
@@ -13,7 +13,7 @@ let products = [
     image: "../images/pngimg.com - mirror_PNG17358.png",
     name: "Classic generic mirror 2",
     price: "$20.00",
-    category: "Bathroom",
+    category: "Bathroom Mirrors",
     material: "Wooden Frame",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem quam optio, aliquam quia necessitatibus, explicabo illo veritatis eveniet voluptas laborum quaerat unde, corrupti earum assumenda corporis quae iusto sint alias."
   },
@@ -22,7 +22,7 @@ let products = [
     image: "../images/pngimg.com - mirror_PNG17358.png",
     name: "Classic generic mirror 3",
     price: "$20.00",
-    category: "Dressing",
+    category: "Bathroom Mirrors",
     material: "Wooden Frame",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem quam optio, aliquam quia necessitatibus, explicabo illo veritatis eveniet voluptas laborum quaerat unde, corrupti earum assumenda corporis quae iusto sint alias."
   },
@@ -31,20 +31,23 @@ let products = [
 
 
 function parseContents(category, material) {
-  $("#products-slot").empty() 
-  if (!category && !material) {
-    for (var e of products) {
-      setProducts(e);
-    }
-  }
+  $("#products-slot").empty()
   let items = [];
   if (category) {
-    items = products.filter((e) => e.category.toLowerCase() === category.toLowerCase());
-  }  else {
+    if (category.toLowerCase() !== "all") {
+      items = products.filter((e) => e.category.toLowerCase() === category.toLowerCase());
+    } else {
+      items = [...products]
+    }
+  } else {
     items = [...products]
   }
   if (material) {
-    items = items.filter((e) => e.material.toLowerCase().includes(material.toLowerCase()));
+    if (material.toLowerCase() !== "all") {
+      items = items.filter((e) => e.material.toLowerCase().includes(material.toLowerCase()));
+    } else {
+      items = [...items]
+    }
   }
   for (var e of items) {
     setProducts(e);
@@ -52,7 +55,7 @@ function parseContents(category, material) {
 }
 
 function setProducts(product) {
- const html = ` 
+  const html = ` 
 <div class="product-card">
         <a href="#" class="details" id="${product.id}">
           <i class="fas fa-info"></i>                                                         
@@ -63,7 +66,7 @@ function setProducts(product) {
         <button class="add-to-cart">Add to Cart</button>
       </div>
     `;
- $("#products-slot").append(html) 
+  $("#products-slot").append(html)
 }
 
 
@@ -85,53 +88,53 @@ function setDialog(product) {
 }
 
 const addDownloadHandler = () => {
-   $(".download-btn").click(function (e) {
-      e.preventDefault();
-      const item = products.filter((e) => `${e.id}` === this.id)     
-      const detail = item[0];
-      const fileContent = `
+  $(".download-btn").click(function(e) {
+    e.preventDefault();
+    const item = products.filter((e) => `${e.id}` === this.id)
+    const detail = item[0];
+    const fileContent = `
 Title: ${detail.name},
 category: ${detail.category},
 Material: ${detail.material},
 Description: ${detail.description}
 `;
-      const link = document.createElement("a");
-      const file = new Blob([fileContent], { type: 'text/plain;charset=utf-8'})
-      link.href = URL.createObjectURL(file);
+    const link = document.createElement("a");
+    const file = new Blob([fileContent], { type: 'text/plain;charset=utf-8' })
+    link.href = URL.createObjectURL(file);
     link.download = "product.txt"
     link.click();
     URL.revokeObjectURL(link.href);
-   })
+  })
 }
 
 
-$(document).ready(function () {
-    console.log(location.href);
-    const url = new URL(location.href);
-    const category = url.searchParams.get("category");    
-    const material = url.searchParams.get("material")
-    if (category) {
-    $("#category").text(`${category} Mirrors`)
+$(document).ready(function() {
+  console.log(location.href);
+  const url = new URL(location.href);
+  const category = url.searchParams.get("category");
+  const material = url.searchParams.get("material")
+  if (category) {
+    $("#category").text(`${category}`)
   }
 
-    if (material) {
+  if (material) {
     $("#material").text(`${material}`)
   }
-    console.log(category, JSON.stringify(material));
-    parseContents(category, material);
-    $(".details").click(function(event) {
-      event.preventDefault();
-      $("#dialog").empty()
-      const item = products.filter((e) => `${e.id}` === this.id)     
-      setDialog(item[0])
-      $("#dialog").toggleClass("hidden");
+  console.log(category, JSON.stringify(material));
+  parseContents(category, material);
+  $(".details").click(function(event) {
+    event.preventDefault();
+    $("#dialog").empty()
+    const item = products.filter((e) => `${e.id}` === this.id)
+    setDialog(item[0])
+    $("#dialog").toggleClass("hidden");
     addDownloadHandler();
-    })
-    $("#dialog").click(function(event) {
-      if (event.target !== this) {
+  })
+  $("#dialog").click(function(event) {
+    if (event.target !== this) {
       return;
     }
-      $("#dialog").toggleClass("hidden");
+    $("#dialog").toggleClass("hidden");
   })
 })
 
