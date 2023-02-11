@@ -71,8 +71,8 @@ li.product {
 }
 
 li.material {
- display: inline-block; 
- position: relative;
+  display: inline-block;
+  position: relative;
 }
 
 
@@ -196,6 +196,7 @@ li.material {
 .row {
   display: flex;
   flex-wrap: wrap;
+  margin-left: 20%;
 }
 
 ul {
@@ -236,7 +237,7 @@ ul {
   text-transform: capitalize;
   color: #0b0d9d;
   text-decoration: none;
-  font-weight: 300;
+  font-weight: 500;
   display: block;
   transition: all 0.3s ease;
 }
@@ -378,7 +379,7 @@ footer-col .social-links a {
     margin-bottom: 30px;
   }
 
-  .footer-col ul li a{
+  .footer-col ul li a {
     font-size: 14px;
   }
 

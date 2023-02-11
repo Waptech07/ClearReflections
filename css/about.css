@@ -1,4 +1,5 @@
-.about-banner {
+.about-banner,
+.contact-banner {
     background: #ffffff;
     border-radius: 10px;
     box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
@@ -8,40 +9,61 @@
     text-align: center;
     justify-content: center;
     align-items: center;
-
 }
 
-.about-banner h1 {
+.about-heading h1,
+.contact-heading h1 {
+    font-family: 'The Nautigal', cursive;
     color: #0b0d9d;
 }
 
-.about-banner p {
-    color: #555;
+.about-image img {
+    border-radius: 10px;
+    width: 30%;
+    height: 100%;
+    float: left;
+    margin: 10px 2% 2px 12%;
+}
+
+.contact-image img {
+    border-radius: 10px;
+    width: 30%;
+    height: 100%;
+    float: left;
+    margin: -40px 2% 10px 2%;
+}
+
+.about-banner p,
+.contact-banner p {
+    font-family: 'The Nautigal', cursive;
+    color: #000;
     margin: 2px 12%;
     padding: 20px 0 50px 0;
-    font-family: 'Open Sans', sans-serif;
     text-align: justify;
 }
 
-.about-banner p a {
+.contact-banner p a {
     color: #0b0d9d;
     font-weight: bold
 }
 
-.about-banner p a:hover {
-    color: #000;
+.contact-banner p a:hover {
+    color: #555;
 }
 
 @media (max-width:1010px) {
-    .about-banner {
+    .about-banner,
+    .contact-banner {
         margin: 50px 10%;
     }
 
-    .about-banner h1 {
+    .about-heading h1,
+    .contact-heading h1 {
         font-size: 40px;
     }
 
-    .about-banner p {
+    .about-banner p,
+    .contact-banner p {
         font-size: 15px;
     }
 
