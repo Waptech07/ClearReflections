@@ -54,3 +54,107 @@ ul > * + * {
 }
 
 
+#dialog {
+  width: 100vw;
+  display: flex;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  background-color: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+
+.card {
+  padding: 8px 12px;
+  border-radius: 16px;
+  background: white;
+  height: 80%;
+  width: 80%;
+  margin-top: 70px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 900px) {
+  .card {
+    max-width: 700px;
+  }
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background: white;
+  padding-bottom: 2px;
+}
+
+.hidden {
+   visibility: hidden;
+}
+
+
+
+.card::-webkit-scrollbar {
+   display: none;
+}
+
+.image {
+  max-height: 400px;
+  object-fit: contain;
+}
+
+.download-btn {
+  margin-top: 10px;
+  display: inline-block;
+  padding: 4px 10px;
+  color: white;
+  background-color: blue;
+  border-radius: 4px;
+}
+
+.download-btn:hover {
+  opacity: 0.7;
+}
+
+.card-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.material-chip {
+  background-color: lightblue;
+  color: white;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 10px;
+  margin-left: 12px;
+}
+
+* {
+  * outline: 3px solid orange;
+  * }
+
+.center {
+  margin: 0 auto;
+}
+
+
