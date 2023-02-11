@@ -53,6 +53,9 @@ ul > * + * {
   min-height: 400px;
 }
 
+.products {
+  flex-wrap: wrap;
+}
 
 #dialog {
   width: 100vw;
@@ -68,6 +71,13 @@ ul > * + * {
   align-items: center;
 }
 
+#dialog .close-dialog{
+  color: #0b0d9d;
+  font-size: 20px;
+  float: right;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
 
 .card {
   padding: 8px 12px;
@@ -111,8 +121,6 @@ ul > * + * {
    visibility: hidden;
 }
 
-
-
 .card::-webkit-scrollbar {
    display: none;
 }
@@ -141,17 +149,13 @@ ul > * + * {
 }
 
 .material-chip {
-  background-color: lightblue;
+  background-color: #0b0d9d;
   color: white;
   font-weight: 500;
   padding: 4px 10px;
   border-radius: 10px;
   margin-left: 12px;
 }
-
-* {
-  * outline: 3px solid orange;
-  * }
 
 .center {
   margin: 0 auto;
